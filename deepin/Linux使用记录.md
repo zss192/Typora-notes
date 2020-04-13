@@ -34,6 +34,7 @@ chown -R 用户名 文件夹	//更改指定文件夹下所有文件所有者，
 - 使用**Ctrl+u删除光标前所有内容**，Ctrl+k删除光标后所有内容
 - rm ~/.config/SweetScape/010\ Editor.ini  可无限试用010editor
 - ~/.local/share/applications/wine/Programs/下rm掉多余的wine软件菜单项，再到~/.config/menus/applications-merged/下去清理多余的垃圾。
+- crontab可定时执行脚本
 
 # 常见问题解决方案
 

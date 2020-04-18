@@ -38,3 +38,15 @@ a = fp.readlines()	#a为列表
 十转ascii：chr(int(i))
 ```
 
+6.unicode转中文
+
+```python
+s = '\u82e6\u6d77\u65e0\u6daf\u56de\u5934\u662f\u5cb8' 
+print(s.encode("utf-8").decode("unicode_escape"))   #苦海无涯回头是岸
+```
+
+```python
+s = u'\u82e6\u6d77\u65e0\u6daf\u56de\u5934\u662f\u5cb8' 
+print(s) 苦海无涯回头是岸
+```
+

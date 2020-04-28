@@ -25,3 +25,6 @@ crontab -l 		//查看corntan文件
 - 当 f1 为 */n 时表示每 n 分钟个时间间隔执行一次，f2 为 */n 表示每 n 小时个时间间隔执行一次，其馀类推
 - 当 f1 为 a, b, c,… 时表示第 a, b, c,… 分钟要执行，f2 为 a, b, c,… 时表示第 a, b, c…个小时要执行，其馀类推
 - ![image-20200413180430216](https://raw.githubusercontent.com/zss192/Typora-notes/master/images/image-20200413180430216.png)
+
+
+

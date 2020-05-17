@@ -103,3 +103,4 @@ sudo /usr/local/mysql/support-files/mysql.server start  //启动mysql，重新�
 添加一行 MimeType=*/*  即可
 ```
 
+14.telegram不要使用2.1.5的版本会出现无法输入中文的问题，使用2.1.4即可解决

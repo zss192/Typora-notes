@@ -106,4 +106,4 @@ sudo /usr/local/mysql/support-files/mysql.server start  //启动mysql，重新�
 
 14.telegram不要使用2.1.5的版本会出现无法输入中文的问题，使用2.1.4即可解决
 
-15.更新最新版的QQ：将Windows的C:\Program Files (x86)\Tencent\QQ\下的文件覆盖~/.deepinwine/Deepin-QQ/drive_c/Program Files/Tencent/QQ/即可（先备份）
+15.更新最新版的QQ：将Windows的C:\Program Files (x86)\Tencent\QQ\下的文件覆盖~/.deepinwine/Deepin-QQ/drive_c/Program\ Files/Tencent/QQ/即可（先备份）

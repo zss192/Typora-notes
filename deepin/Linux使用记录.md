@@ -62,11 +62,7 @@ wine  msiexec /i  wine-mono-4.9.4.msi  //例如安装wine-mono
 
 8.qq无法加载图片
 
-```bash
-sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
-sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
-sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
-```
+关闭ipv6
 
 9.tmp下的mysql.sock文件被删，导致navicat打不开本地数据库
 

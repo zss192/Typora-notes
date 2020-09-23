@@ -111,3 +111,9 @@ sudo /usr/local/mysql/support-files/mysql.server start  //启动mysql，重新�
 ```
 
 以后都可以用cnpm代替npm了
+
+17.百度网盘无法登录
+
+编辑百度网盘的图标把Exec内容前加上sudo(用管理员身份打开)
+
+如果用的UTools，修改过图标后重启，UTools里打开才是修改后的

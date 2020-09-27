@@ -25,7 +25,7 @@ ifconfig	//常用于查看ip信息，不一定只有两个
 man 指令名		//用于查询某指令的用法，如man mv
 tar -zxvf 压缩包	//解压压缩包
 sudo dpkg -i test.deb	//安装deb包
-export http_proxy="http://127.0.0.1:12333"	//终端暂时使用代理
+export http_proxy="http://127.0.0.1:12333"	//终端暂时使用代理(推荐用proxychains)
 chown -R 用户名 文件夹	//更改指定文件夹下所有文件所有者，
 zip -r myFile.zip ./*  	//将当前所有文件压缩成zip包
 ```
@@ -33,20 +33,42 @@ zip -r myFile.zip ./*  	//将当前所有文件压缩成zip包
 # 使用技巧
 
 - 使用**Ctrl+u删除光标前所有内容**，Ctrl+k删除光标后所有内容
+
 - rm ~/.config/SweetScape/010\ Editor.ini  可无限试用010editor
+
+- Navicat15破解：[点我查看](https://www.yuque.com/fank243/devops/crzwuq)
+
 - ~/.local/share/applications/wine/Programs/下rm掉多余的wine软件菜单项，再到~/.config/menus/applications-merged/下去清理多余的垃圾。
+
 - crontab可定时执行脚本
+
 - 安装mysql:https://wangxin1248.github.io/linux/2018/07/ubuntu18.04-install-mysqlserver.html
+
+- 终端暂时使用代理 proxychains + 命令
+
+- 浏览器快捷键：
+
+  **Ctrl + L**   地址栏搜索
+
+  **Ctrl + T**   打开新标签页；
+
+  **Ctrl + W**  关闭当前标签页；
+
+  **Ctrl + Shift + W**  关闭整个浏览器
+
+  **Ctrl + 数字键 1 至 8** 可以按标签页顺序定位；
+
+  **空格键** 可以向下滚动网页，**Shift + 空格键** 则是向上。
 
 # 常见问题解决方案
 
 1.将一个py文件添加到bash直接在终端输入不用切换到想用目录
 
-ln -s /opt/dirsearch/dirsearch.py /bin/bash/dirsearch   //在终端输入dirsearch即可运行这个py文件
+ln -s /opt/tools/dirsearch/dirsearch.py /bin/dirsearch   //在终端输入dirsearch即可运行这个py文件
 
 2.deepin中默认的编辑器用dedit(ded按tab即可)
 
-3..普通用户使用sudo免密码：vi /etc/sudoers 修改your_user_name ALL=(ALL) NOPASSWD: ALL
+3..普通用户使用sudo免密码：dedit /etc/sudoers 修改your_user_name ALL=(ALL) NOPASSWD: ALL
 
 4.sudoers文件修改错误导致无法使用sudo：pkexec 代替sudo更改sudoers文件
 

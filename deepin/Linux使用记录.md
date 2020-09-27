@@ -117,3 +117,9 @@ sudo /usr/local/mysql/support-files/mysql.server start  //启动mysql，重新�
 编辑百度网盘的图标把Exec内容前加上sudo(用管理员身份打开)
 
 如果用的UTools，修改过图标后重启，UTools里打开才是修改后的
+
+18.解决QQ卡顿问题：
+
+替换dwrite.dll，[点我下载](https://bbs.deepin.org/forum.php?mod=attachment&aid=OTg1MTJ8NjBlYzc3NTB8MTYwMTEwMzQxNnwwfDE5NjE4OQ%3D%3D)，解压后重命名为dwrite.dll然后替换~/.wine/drive_c/windows/system32/下的dwrite.dll。
+
+之后在winecfg里面设置函数库添加dwrite，同时模拟windows版本只能设置成xp

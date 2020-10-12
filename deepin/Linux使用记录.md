@@ -145,3 +145,13 @@ sudo /usr/local/mysql/support-files/mysql.server start  //启动mysql，重新�
 替换dwrite.dll，[点我下载](https://bbs.deepin.org/forum.php?mod=attachment&aid=OTg1MTJ8NjBlYzc3NTB8MTYwMTEwMzQxNnwwfDE5NjE4OQ%3D%3D)，解压后重命名为dwrite.dll然后替换~/.wine/drive_c/windows/system32/下的dwrite.dll。
 
 之后在winecfg里面设置函数库添加dwrite，同时模拟windows版本只能设置成xp
+
+19.无法弹出U盘(有程序正在使用)
+
+```
+df -h查看挂载点，例如/dev/sdb1
+fuser -mv /dev/sdb1查看U盘的uid，杀死这个进程
+kill -9进程号
+正常弹出U盘即可
+```
+

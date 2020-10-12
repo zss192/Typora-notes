@@ -152,6 +152,6 @@ sudo /usr/local/mysql/support-files/mysql.server start  //启动mysql，重新�
 df -h查看挂载点，例如/dev/sdb1
 fuser -mv /dev/sdb1查看U盘的uid，杀死这个进程
 kill -9进程号
-正常弹出U盘即可
+正常弹出U盘即可 
 ```
 

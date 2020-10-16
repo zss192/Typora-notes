@@ -46,6 +46,18 @@ zip -r myFile.zip ./*  	//将当前所有文件压缩成zip包
 
 - 终端暂时使用代理 proxychains + 命令
 
+- 格式化U盘为ext4格式
+
+  - \# 该命令查看你的设备
+    lsblk -f
+
+    \# 卸载U盘
+
+    umount 你的U盘设备(如/dev/sdb1)
+
+    \# 格式化成ext4格式
+    mkfs.ext4 你的U盘设备(如/dev/sdb1)，之后等就行了
+
 - 浏览器快捷键：
 
   **Ctrl + L**   地址栏搜索

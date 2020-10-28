@@ -1,7 +1,7 @@
 # 目录结构
 
 ```
-/usr/bin 可执行文件，可在终端输入即可执行
+/bin 可执行文件，可在终端输入即可执行
 /etc 	 配置文件
 /home    除root用户的其他用户的家目录
 /tmp     临时文件，系统运行时产生的临时文件
@@ -47,7 +47,7 @@ zip -r myFile.zip ./*  	//将当前所有文件压缩成zip包
 
 - 终端暂时使用代理 proxychains + 命令
 
-- 格式化U盘为ext4格式
+- 格式化U盘为ext4格式(timeshift备份到U盘)
 
   - \# 该命令查看你的设备
     lsblk -f
@@ -81,7 +81,7 @@ ln -s /opt/tools/dirsearch/dirsearch.py /bin/dirsearch   //在终端输入dirsea
 
 2.deepin中默认的编辑器用dedit(ded按tab即可)
 
-3..普通用户使用sudo免密码：dedit /etc/sudoers 修改your_user_name ALL=(ALL) NOPASSWD: ALL
+3.普通用户使用sudo免密码：dedit /etc/sudoers 修改your_user_name ALL=(ALL) NOPASSWD: ALL
 
 4.sudoers文件修改错误导致无法使用sudo：pkexec 代替sudo更改sudoers文件
 
@@ -153,7 +153,7 @@ sudo /usr/local/mysql/support-files/mysql.server start  //启动mysql，重新�
 
 如果用的UTools，修改过图标后重启，UTools里打开才是修改后的
 
-18.解决QQ卡顿问题：
+18.解决QQ崩溃问题(可减少崩溃次数)：
 
 替换dwrite.dll，[点我下载](https://bbs.deepin.org/forum.php?mod=attachment&aid=OTg1MTJ8NjBlYzc3NTB8MTYwMTEwMzQxNnwwfDE5NjE4OQ%3D%3D)，解压后重命名为dwrite.dll然后替换~/.wine/drive_c/windows/system32/下的dwrite.dll。
 

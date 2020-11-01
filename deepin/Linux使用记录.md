@@ -12,7 +12,7 @@
 # 常用命令
 
 ```bash
-rsync -avzPr 源文件 目标文件	//快速复制大文件
+rsync -avPr 源文件 目标文件	//快速复制大文件
 cat test1.txt test2.txt > test.txt //合并test1和test2到test,比如可制作马
 df -h	//以较高可读性查看磁盘空间
 管道 |：ls / | grep abc	//查询根目录下包含“abc”的文件，后面是在前面输出的基础上过滤的

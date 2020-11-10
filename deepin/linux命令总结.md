@@ -26,5 +26,20 @@ crontab -l 		//查看corntan文件
 - 当 f1 为 a, b, c,… 时表示第 a, b, c,… 分钟要执行，f2 为 a, b, c,… 时表示第 a, b, c…个小时要执行，其馀类推
 - ![image-20200413180430216](https://raw.githubusercontent.com/zss192/Typora-notes/master/images/image-20200413180430216.png)
 
+# docker
 
+```bash
+docker ps		//查询正在运行的容器
+docker ps -a	//查询所有的容器
+docker start 容器id/容器名称	//开启容器
+docker stop 容器id/容器名称	//关闭容器
+docker rm 容器id/容器名称		//删除容器(需先关闭)
+docker exec -it 容器id/容器名称 /bin/bash		//进入容器(已安装curl)
+exit				//退出容器
+docker images		//查看docker中所有镜像
+docker rmi 镜像id/名称		//删除镜像
+docker rename 原容器名 新容器名		//重命名容器
+```
+
+安装mysql等应用，[点我查看](https://blog.csdn.net/zss192/article/details/105436623)
 

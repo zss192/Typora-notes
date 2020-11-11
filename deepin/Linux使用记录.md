@@ -29,6 +29,7 @@ sudo dpkg -i test.deb	//安装deb包
 export http_proxy="http://127.0.0.1:12333"	//终端暂时使用代理(推荐用proxychains)
 chown -R 用户名 文件夹	//更改指定文件夹下所有文件所有者，
 zip -r myFile.zip ./*  	//将当前所有文件压缩成zip包
+alien xxx.rpm	//将rpm转换成deb
 ```
 
 # 使用技巧
@@ -61,6 +62,31 @@ zip -r myFile.zip ./*  	//将当前所有文件压缩成zip包
   
 - 查看主目录下隐藏文件大小从大到小排序：du -sh .[!.]* | sort -hr
 
+  
+
+# 常用软件安装
+
+- 安装Apache
+
+  - sudo apt install apache2
+
+- 安装php
+
+  - sudo apt install php7.3 libapache2-mod-php7.3 php7.3-mysql	（7.3可以换成其他版本）
+
+- 安装Docker：sudo apt install docker.io
+
+  - 换源：sudo dedit /etc/docker/daemon.json(为空就新建) 添加
+
+    {
+      "registry-mirrors": ["https://vgpzl20e.mirror.aliyuncs.com"]
+    }
+
+  - 免sudo：sudo usermod -aG docker zss;sudo service docker restart;newgrp - docker
+  
+- 安装mysql(docker)：[点我查看](https://blog.csdn.net/zss192/article/details/105436623)
+
+- 安装Apache和php(docker)：docker pull nimmis/apache-php7;docker run -d -p 80:80 -v /var/www/html:/var/www/html nimmis/apache-php7
 
 # 常见问题解决方案
 

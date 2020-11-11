@@ -66,11 +66,11 @@ alien xxx.rpm	//将rpm转换成deb
 
 # 常用软件安装
 
-- 安装Apache
+- 安装Apache(推荐用Docker)
 
   - sudo apt install apache2
 
-- 安装php
+- 安装php(推荐用Docker)
 
   - sudo apt install php7.3 libapache2-mod-php7.3 php7.3-mysql	（7.3可以换成其他版本）
 

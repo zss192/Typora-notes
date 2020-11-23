@@ -30,11 +30,14 @@ export http_proxy="http://127.0.0.1:12333"	//终端暂时使用代理(推荐用p
 chown -R 用户名 文件夹	//更改指定文件夹下所有文件所有者，
 zip -r myFile.zip ./*  	//将当前所有文件压缩成zip包
 alien xxx.rpm	//将rpm转换成deb
+neofetch	//查看系统基本信息
 ```
 
 # 使用技巧
 
 - 使用**Ctrl+u删除光标前所有内容**，Ctrl+k删除光标后所有内容
+
+- Ctrl+R输入执行命令的一部分选择提示的历史命令
 
 - rm ~/.config/SweetScape/010\ Editor.ini  可无限试用010editor
 
@@ -61,6 +64,8 @@ alien xxx.rpm	//将rpm转换成deb
     mkfs.ext4 你的U盘设备(如/dev/sdb1)，之后等就行了
   
 - 查看主目录下隐藏文件大小从大到小排序：du -sh .[!.]* | sort -hr
+
+- 隐藏启动菜单指定图标：编辑图标添加NoDisplay=true
 
   
 

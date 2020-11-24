@@ -188,3 +188,18 @@ kill -9进程号
 正常弹出U盘即可
 ```
 
+20.不能自主降频的问题，导致风扇经常一直转
+
+```bash
+sudo apt install i7z
+sudo i7z
+
+安装tlp
+sudo apt install tlp tlp-rdw
+sudo tlp start
+tlp-stat -s
+启动之后再看一次i7z，完美解决。
+sudo i7z
+```
+
+

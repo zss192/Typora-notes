@@ -202,4 +202,11 @@ tlp-stat -s
 sudo i7z
 ```
 
+21.卸载内核(不能卸载当前正在用的)
 
+```bash
+dpkg --get-selections| grep linux		#列出当前已安装的内核
+#例如卸载linux5.1.9
+sudo apt remove --purge linux-headers-5.1.9-050109	
+sudo apt remove --purge linux-modules-5.1.9-050109-generic
+```

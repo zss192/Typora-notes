@@ -210,3 +210,10 @@ dpkg --get-selections| grep linux		#列出当前已安装的内核
 sudo apt remove --purge linux-headers-5.1.9-050109	
 sudo apt remove --purge linux-modules-5.1.9-050109-generic
 ```
+
+22.更改QQ或TIM等wine应用的界面字体大小
+
+```bash
+env WINEPREFIX="/home/zss/.deepinwine/Deepin-QQ" deepin-wine5 winecfg    #v20为deepin-wine5,15.11为deepin-wine
+```
+

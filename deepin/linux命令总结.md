@@ -41,5 +41,3 @@ docker rmi 镜像id/名称		//删除镜像
 docker rename 原容器名 新容器名		//重命名容器
 ```
 
-安装mysql等应用，[点我查看](https://blog.csdn.net/zss192/article/details/105436623)
-

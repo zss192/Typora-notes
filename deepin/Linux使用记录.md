@@ -13,16 +13,16 @@
 
 ```bash
 rsync -avPr 源文件 目标文件	//快速复制大文件
-cat test1.txt test2.txt > test.txt //合并test1和test2到test,比如可制作马
+cat test1.txt test2.txt > test.txt //合并test1和test2到test
 df -h	//以较高可读性查看磁盘空间
 管道 |：ls / | grep abc	//查询根目录下包含“abc”的文件，后面是在前面输出的基础上过滤的
 top //动态展示进程占得资源，按M(MEM)表示按内存从高到低排列，P表示按CPU使用率从高到低排列
 find 路径范围 -name 文件名称  //如find /etc -name *.conf
 ps -ef	//查看进程信息，如查询appache的httpd服务是否开启，ps -ef | grep httpd
-service 服务名 start/stop/restart	//如service httpd start
+systemctl start/stop/restart 服务名	//和service类似功能但可设置服务是否自启动
 kill -9 进程id	//如kill 29867,进程id可通过top或ps -ef获得
 killall 进程名称	//如killall httpd
-ifconfig	//常用于查看ip信息，不一定只有两个
+ifconfig	//常用于查看ip信息
 man 指令名		//用于查询某指令的用法，如man mv
 tar -zxvf 压缩包	//解压压缩包
 sudo dpkg -i test.deb	//安装deb包
@@ -46,8 +46,6 @@ neofetch	//查看系统基本信息
 - ~/.local/share/applications/wine/Programs/下rm掉多余的wine软件菜单项，再到~/.config/menus/applications-merged/下去清理多余的垃圾。
 
 - crontab可定时执行脚本
-
-- 安装mysql:https://wangxin1248.github.io/linux/2018/07/ubuntu18.04-install-mysqlserver.html
 
 - 终端暂时使用代理 proxychains + 命令
 
@@ -101,7 +99,7 @@ ln -s /opt/tools/dirsearch/dirsearch.py /bin/dirsearch   //在终端输入dirsea
 
 2.deepin中默认的编辑器用dedit(ded按tab即可)
 
-3.普通用户使用sudo免密码：dedit /etc/sudoers 修改your_user_name ALL=(ALL) NOPASSWD: ALL
+3.普通用户使用sudo免密码：dedit /etc/sudoers 添加zss ALL=(ALL) NOPASSWD: ALL
 
 4.sudoers文件修改错误导致无法使用sudo：pkexec 代替sudo更改sudoers文件
 
@@ -161,7 +159,7 @@ sudo /usr/local/mysql/support-files/mysql.server start  //启动mysql，重新�
 
 16.npm太慢可以用cnpm（镜像，第一次用要下载）
 
-```
+```bash
  npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```
 
@@ -215,5 +213,11 @@ sudo apt remove --purge linux-modules-5.1.9-050109-generic
 
 ```bash
 env WINEPREFIX="/home/zss/.deepinwine/Deepin-QQ" deepin-wine5 winecfg    #v20为deepin-wine5,15.11为deepin-wine
+```
+
+23.更改文件管理器名50G卷为数据盘
+
+```bash
+sudo e2label /dev/sda2 数据盘	#也可换成其他名字
 ```
 

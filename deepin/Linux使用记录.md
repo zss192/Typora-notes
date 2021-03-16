@@ -65,6 +65,8 @@ neofetch	//查看系统基本信息
 
 - 隐藏启动菜单指定图标：编辑图标添加NoDisplay=true
 
+- desktop文件始终用代理打开：Exec一行加上 --proxy-server=http://127.0.0.1:12333 即可
+
   
 
 # 常用软件安装

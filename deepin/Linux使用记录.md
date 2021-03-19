@@ -162,7 +162,7 @@ sudo /usr/local/mysql/support-files/mysql.server start  //启动mysql，重新�
 16.npm太慢可以用cnpm（镜像，第一次用要下载）
 
 ```bash
- npm install -g cnpm --registry=https://registry.npm.taobao.org
+ sudo npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```
 
 以后都可以用cnpm代替npm了

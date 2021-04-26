@@ -65,6 +65,8 @@ neofetch	//查看系统基本信息
 
 - 隐藏启动菜单指定图标：编辑图标添加NoDisplay=true
 
+- desktop文件始终用代理打开：Exec一行加上 --proxy-server=http://127.0.0.1:12333 即可
+
   
 
 # 常用软件安装
@@ -160,7 +162,7 @@ sudo /usr/local/mysql/support-files/mysql.server start  //启动mysql，重新�
 16.npm太慢可以用cnpm（镜像，第一次用要下载）
 
 ```bash
- npm install -g cnpm --registry=https://registry.npm.taobao.org
+ sudo npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```
 
 以后都可以用cnpm代替npm了

@@ -224,3 +224,10 @@ env WINEPREFIX="/home/zss/.deepinwine/Deepin-QQ" deepin-wine5 winecfg    #v20为
 sudo e2label /dev/sda2 数据盘	#也可换成其他名字
 ```
 
+24.ubuntu20.04安装星火商店的问题解决：[点我查看](https://www.cnblogs.com/comp1ex/p/15426414.html)
+
+25.ubuntu没有声音
+
+使用PulseAudio可解决，但每次重启都要重新设置
+
+解决方案：[点我查看](https://blog.csdn.net/qq_35156410/article/details/107401642)

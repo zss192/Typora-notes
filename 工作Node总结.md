@@ -45,4 +45,129 @@ for (let i of list) {console.log(i);} // "4", "5", "6"
 
 - forEach()和map()都只能遍历数组，若遍历对象可以用for in或for of
 - 都支持三个参数：当前项item、当前项索引index、原始数组arr
-- forEach()不会返回数据（不修改数据用这个），而`map()`会返回一个新的数组（修改数据用这个）
+- forEach()不会返回数据；而`map()`会返回一个新的数组，用变量接收进行后续操作
+
+7.增删改查
+
+```typescript
+// 增：示例文件/user/jwb/salary/addSalaryOtherItem
+let item = await util.Model.salary.salary_other_item.create({
+    branch_id: branch_id,
+    title: title,
+    state: 0,
+    create_at: util.changeTimeZone.getChinaTime(new Date()),
+    update_at: util.changeTimeZone.getChinaTime(new Date()),
+});
+util.ResponseWithData(ctx, item);
+```
+
+```typescript
+// 改：示例文件/card/b/team/hideTeam
+// 先查一个，再update更改
+let team = await util.Model.Team.findOne({
+        where: {
+            branch_id: branch_id,
+            id: team_id,
+            del: 0
+        },
+        benchmark: true,
+    });
+await team.update({
+            card_open: 2
+    });
+
+```
+
+```typescript
+// 删：示例文件/user/jwb/erp_inv/change/deleteChange
+// 删除项目不是用delete删除，而是更新字段用来代表已经删除
+let finance = await util.Model.jwb.finance.findOne({
+    where: {
+        id: change.finance_id,
+        del: 0,
+        branch_id: branch_id,
+    }
+});
+await finance.update({
+            del: 1,
+            del_time: util.changeTimeZone.getChinaTime(new Date()),
+        });
+```
+
+```typescript
+// 查：示例文件/internal/report/branchWeekReport
+// 查找一个用findOne查找多个用findAll
+let lessons = await util.Model.Lesson.findAll({
+    attributes: ['id', 'cal_id', 'sign', 'wipe', 'price'],
+    where: {
+        branchId: branch_id,
+        cal_id: {
+            [sequelize.Op.in]: cal_ids,
+        },
+        del: 0,
+    }
+});
+// 有时需要取下dataValues才是真正的数据
+lessons = lessons.map(item => item.dataValues);
+```
+
+8.获取变量类型
+
+```typescript
+let a=1;
+console.log(typeof a);
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```typescript
+
+```

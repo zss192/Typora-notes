@@ -70,7 +70,7 @@ let team = await util.Model.Team.findOne({
             id: team_id,
             del: 0
         },
-        benchmark: true,
+
     });
 await team.update({
             card_open: 2

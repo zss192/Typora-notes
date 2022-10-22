@@ -62,12 +62,18 @@ neofetch	//查看系统基本信息
     \# 格式化成ext4格式
     mkfs.ext4 你的U盘设备(如/dev/sdb1)，之后等就行了
   
-- 查看主目录下隐藏文件大小从大到小排序：du -sh .[!.]* | sort -hr
+- 查看主目录下所有文件(包含隐藏文件)大小从大到小排序：du -h --max-depth=1 | sort -hr
 
 - 隐藏启动菜单指定图标：编辑图标添加NoDisplay=true
 
 - desktop文件始终用代理打开：Exec一行加上 --proxy-server=http://127.0.0.1:12333 即可
 
+- 对于不想更新的软件，使用以下命令可在update的时候不会更新
+
+  ```bash
+  sudo apt-mark hold netease-cloud-music	//禁止自动更新网易云音乐，取消用unhold即可
+  ```
+  
   
 
 # 常用软件安装
@@ -222,5 +228,11 @@ env WINEPREFIX="/home/zss/.deepinwine/Deepin-QQ" deepin-wine5 winecfg    #v20为
 
 ```bash
 sudo e2label /dev/sda2 数据盘	#也可换成其他名字
+```
+
+24.系统卡死，且无法进入TTY，安全重启步骤为
+
+```bash
+按住Alt+PrtSc，然后依次按下REISUB键
 ```
 

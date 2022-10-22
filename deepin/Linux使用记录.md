@@ -44,7 +44,7 @@ neofetch	//查看系统基本信息
 
 - Navicat15破解：[点我查看](https://www.yuque.com/fank243/devops/crzwuq)
 
-- ~/.local/share/applications/wine/Programs/下rm掉多余的wine软件菜单项，再到~/.config/menus/applications-merged/下去清理多余的垃圾。
+- \~/.local/share/applications/wine/Programs/下rm掉多余的wine软件菜单项，再到~/.config/menus/applications-merged/下去清理多余的垃圾。
 
 - crontab可定时执行脚本
 
